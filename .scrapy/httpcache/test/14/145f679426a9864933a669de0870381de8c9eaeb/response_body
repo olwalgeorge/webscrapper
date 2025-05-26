@@ -1,0 +1,13 @@
+{
+  "args": {}, 
+  "headers": {
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", 
+    "Accept-Encoding": "gzip, deflate", 
+    "Accept-Language": "en", 
+    "Host": "httpbin.org", 
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36", 
+    "X-Amzn-Trace-Id": "Root=1-6834be74-119c3f345d96c8db1e491286"
+  }, 
+  "origin": "41.90.68.214", 
+  "url": "http://httpbin.org/get"
+}

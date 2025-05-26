@@ -1,0 +1,1 @@
+{'url': 'http://httpbin.org/get', 'method': 'GET', 'status': 200, 'response_url': 'http://httpbin.org/get', 'timestamp': 1748287091.6754472}
