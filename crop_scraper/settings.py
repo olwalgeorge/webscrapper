@@ -66,8 +66,13 @@ REQUEST_FINGERPRINTER_IMPLEMENTATION = '2.7'
 # Set settings whose default value is deprecated
 TWISTED_REACTOR = 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'
 
+# Load environment variables
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
 # ScrapyAPI settings (when using ScrapyAPI service)
-SCRAPYAPI_KEY = 'your-scrapyapi-key-here'  # Set your ScrapyAPI key
+SCRAPYAPI_KEY = os.getenv('SCRAPYAPI_KEY', 'your-scrapyapi-key-here')
 SCRAPYAPI_ENABLED = False  # Set to True when using ScrapyAPI
 
 # Additional anti-bot settings
