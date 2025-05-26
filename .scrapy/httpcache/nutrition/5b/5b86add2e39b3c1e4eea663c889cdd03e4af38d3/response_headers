@@ -1,0 +1,24 @@
+Date: Mon, 26 May 2025 21:36:54 GMT
+Content-Type: text/html; charset=UTF-8
+Cache-Control: max-age=2764800, public
+X-Drupal-Dynamic-Cache: UNCACHEABLE (poor cacheability)
+Content-Language: en
+Expires: Sun, 19 Nov 1978 05:00:00 GMT
+Vary: Cookie,Accept-Encoding
+Access-Control-Allow-Origin: *
+Referrer-Policy: strict-origin-when-cross-origin
+X-Content-Type-Options: nosniff
+X-Frame-Options: allow-from https://umn.instructure.com/
+X-Xss-Protection: 1; mode=block
+X-Drupal-Cache: MISS
+Last-Modified: Sat, 24 May 2025 11:18:59 GMT
+X-Request-Id: v-e365d8d2-3890-11f0-8dde-6f4687d4b6e4
+X-Ah-Environment: prod
+Via: varnish
+X-Cache: HIT
+X-Cache-Hits: 49
+Cf-Cache-Status: REVALIDATED
+Strict-Transport-Security: max-age=31536000
+Server: cloudflare
+Cf-Ray: 946069121bbdb19c-NBO
+Content-Encoding: gzip

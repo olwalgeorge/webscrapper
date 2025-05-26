@@ -15224,3 +15224,552 @@ It will be removed in a future version of Scrapy.
  'scheduler/enqueued/memory': 5,
  'start_time': datetime.datetime(2025, 5, 26, 21, 18, 11, 840950, tzinfo=datetime.timezone.utc)}
 2025-05-27 00:18:14 [scrapy.core.engine] INFO: Spider closed (finished)
+2025-05-27 00:36:27 [scrapy.utils.log] INFO: Scrapy 2.13.0 started (bot: crop_scraper)
+2025-05-27 00:36:28 [scrapy.utils.log] INFO: Versions:
+{'lxml': '5.4.0',
+ 'libxml2': '2.11.9',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '24.11.0',
+ 'Python': '3.12.6 (tags/v3.12.6:a4a2d2b, Sep  6 2024, 20:11:23) [MSC v.1940 '
+           '64 bit (AMD64)]',
+ 'pyOpenSSL': '25.1.0 (OpenSSL 3.5.0 8 Apr 2025)',
+ 'cryptography': '45.0.3',
+ 'Platform': 'Windows-11-10.0.22621-SP0'}
+2025-05-27 00:36:28 [scrapy.addons] INFO: Enabled addons:
+[]
+2025-05-27 00:36:28 [py.warnings] WARNING: C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\utils\request.py:120: ScrapyDeprecationWarning: 'REQUEST_FINGERPRINTER_IMPLEMENTATION' is a deprecated setting.
+It will be removed in a future version of Scrapy.
+  return cls(crawler)
+
+2025-05-27 00:36:28 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-05-27 00:36:28 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_DEBUG': True,
+ 'AUTOTHROTTLE_ENABLED': True,
+ 'AUTOTHROTTLE_MAX_DELAY': 10,
+ 'AUTOTHROTTLE_START_DELAY': 1,
+ 'AUTOTHROTTLE_TARGET_CONCURRENCY': 2.0,
+ 'BOT_NAME': 'crop_scraper',
+ 'CONCURRENT_REQUESTS': 1,
+ 'DOWNLOAD_DELAY': 3,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'HTTPCACHE_ENABLED': True,
+ 'HTTPCACHE_EXPIRATION_SECS': 3600,
+ 'LOG_FILE': 'scraping.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'crop_scraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'SPIDER_MODULES': ['crop_scraper.spiders'],
+ 'TELNETCONSOLE_ENABLED': False,
+ 'USER_AGENT': 'crop_scraper (+http://www.yourdomain.com)'}
+2025-05-27 00:36:29 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'crop_scraper.middlewares.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats',
+ 'scrapy.downloadermiddlewares.httpcache.HttpCacheMiddleware']
+2025-05-27 00:36:29 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-05-27 00:36:29 [scrapy.middleware] INFO: Enabled item pipelines:
+['crop_scraper.pipelines.ValidationPipeline',
+ 'crop_scraper.pipelines.DatabasePipeline',
+ 'crop_scraper.pipelines.JsonWriterPipeline']
+2025-05-27 00:36:29 [scrapy.core.engine] INFO: Spider opened
+2025-05-27 00:36:29 [root] INFO: Database tables created successfully
+2025-05-27 00:36:29 [root] INFO: Database connection established: crops.db
+2025-05-27 00:36:29 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-05-27 00:36:31 [scrapy.extensions.throttle] INFO: slot: www.almanac.com | conc: 1 | delay: 3000 ms (+0) | latency: 1052 ms | size:218372 bytes
+2025-05-27 00:36:31 [nutrition] INFO: Parsing nutrition page: https://www.almanac.com/plant/tomatoes
+2025-05-27 00:36:31 [nutrition] INFO: Successfully extracted nutrition data for: How to Grow Tomatoes: Complete Guide to Planting & Harvesting
+2025-05-27 00:36:31 [root] INFO: Inserted crop: How to Grow Tomatoes: Complete Guide to Planting & Harvesting
+2025-05-27 00:36:33 [scrapy.extensions.throttle] INFO: slot: www.almanac.com | conc: 1 | delay: 3000 ms (+0) | latency:  268 ms | size:207990 bytes
+2025-05-27 00:36:33 [nutrition] INFO: Parsing nutrition page: https://www.almanac.com/plant/carrots
+2025-05-27 00:36:33 [nutrition] INFO: Successfully extracted nutrition data for: How to Grow Carrots: Planting, Growing & Harvesting Tips for Sweet Roots
+2025-05-27 00:36:33 [root] INFO: Inserted crop: How to Grow Carrots: Planting, Growing & Harvesting Tips for Sweet Roots
+2025-05-27 00:36:37 [scrapy.extensions.throttle] INFO: slot: www.almanac.com | conc: 1 | delay: 3000 ms (+0) | latency:  260 ms | size:209827 bytes
+2025-05-27 00:36:38 [nutrition] INFO: Parsing nutrition page: https://www.almanac.com/plant/lettuce
+2025-05-27 00:36:38 [nutrition] INFO: Successfully extracted nutrition data for: How to Grow Lettuce: Sowing, Planting & Harvesting Tips for Crisp Leaves
+2025-05-27 00:36:38 [root] INFO: Inserted crop: How to Grow Lettuce: Sowing, Planting & Harvesting Tips for Crisp Leaves
+2025-05-27 00:36:41 [scrapy.extensions.throttle] INFO: slot: www.almanac.com | conc: 1 | delay: 3000 ms (+0) | latency:  267 ms | size:211208 bytes
+2025-05-27 00:36:41 [nutrition] INFO: Parsing nutrition page: https://www.almanac.com/plant/beans
+2025-05-27 00:36:42 [nutrition] INFO: Successfully extracted nutrition data for: How to Grow Green Beans: Plant, Care & Harvest Guide for Bush & Pole Beans
+2025-05-27 00:36:42 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.almanac.com/plant/beans> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\utils\defer.py", line 343, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\utils\python.py", line 369, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\utils\python.py", line 369, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\core\spidermw.py", line 167, in process_sync
+    yield from iterable
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 58, in process_spider_output
+    for o in result:
+             ^^^^^^
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\core\spidermw.py", line 167, in process_sync
+    yield from iterable
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 58, in process_spider_output
+    for o in result:
+             ^^^^^^
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\core\spidermw.py", line 167, in process_sync
+    yield from iterable
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 58, in process_spider_output
+    for o in result:
+             ^^^^^^
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\core\spidermw.py", line 167, in process_sync
+    yield from iterable
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\spidermiddlewares\depth.py", line 59, in process_spider_output
+    yield from super().process_spider_output(response, result, spider)
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 58, in process_spider_output
+    for o in result:
+             ^^^^^^
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\core\spidermw.py", line 167, in process_sync
+    yield from iterable
+  File "C:\Users\PC\byu classwork\wd330\project\crop_scraper\spiders\nutrition_spider.py", line 90, in parse
+    for recipe in self.extract_nutrient_recipes(response, item.get('name', 'Unknown')):
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\byu classwork\wd330\project\crop_scraper\spiders\nutrition_spider.py", line 207, in extract_nutrient_recipes
+    recipe = self.parse_fertilizer_schedule(content, crop_name, response.url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\byu classwork\wd330\project\crop_scraper\spiders\nutrition_spider.py", line 250, in parse_fertilizer_schedule
+    recipe['fertilizer_type'] = 'scheduled_feeding'
+    ~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'CropItem does not support field: fertilizer_type'
+2025-05-27 00:36:42 [root] INFO: Inserted crop: How to Grow Green Beans: Plant, Care & Harvest Guide for Bush & Pole Beans
+2025-05-27 00:36:45 [scrapy.extensions.throttle] INFO: slot: www.almanac.com | conc: 1 | delay: 3000 ms (+0) | latency:  262 ms | size:212412 bytes
+2025-05-27 00:36:45 [nutrition] INFO: Parsing nutrition page: https://www.almanac.com/plant/corn
+2025-05-27 00:36:46 [nutrition] INFO: Successfully extracted nutrition data for: How to Grow Sweet Corn: Planting, Pollination & Harvesting Tips
+2025-05-27 00:36:46 [root] INFO: Inserted crop: How to Grow Sweet Corn: Planting, Pollination & Harvesting Tips
+2025-05-27 00:36:50 [scrapy.extensions.throttle] INFO: slot: www.almanac.com | conc: 1 | delay: 3000 ms (+0) | latency:  270 ms | size:218396 bytes
+2025-05-27 00:36:50 [nutrition] INFO: Parsing nutrition page: https://www.almanac.com/plant/potatoes
+2025-05-27 00:36:50 [nutrition] INFO: Successfully extracted nutrition data for: Planting, Growing, and Harvesting Potatoes
+2025-05-27 00:36:50 [root] INFO: Inserted crop: Planting, Growing, and Harvesting Potatoes
+2025-05-27 00:36:54 [scrapy.extensions.throttle] INFO: slot: extension.umn.edu | conc: 1 | delay: 3000 ms (+0) | latency: 3835 ms | size: 17709 bytes
+2025-05-27 00:36:54 [nutrition] INFO: Parsing nutrition page: https://extension.umn.edu/vegetables/growing-tomatoes
+2025-05-27 00:36:54 [nutrition] INFO: Successfully extracted nutrition data for: Growing Tomatoes
+2025-05-27 00:36:54 [root] INFO: Inserted crop: Growing Tomatoes
+2025-05-27 00:36:55 [scrapy.extensions.throttle] INFO: slot: extension.psu.edu | conc: 1 | delay: 3000 ms (+0) | latency: 1126 ms | size:288812 bytes
+2025-05-27 00:36:55 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://extension.psu.edu/vegetable-fertilizer-recommendations>: HTTP status code is not handled or not allowed
+2025-05-27 00:36:56 [scrapy.extensions.throttle] INFO: slot: ag.umass.edu | conc: 1 | delay: 3000 ms (+0) | latency:  931 ms | size:   415 bytes
+2025-05-27 00:36:59 [scrapy.extensions.throttle] INFO: slot: ag.umass.edu | conc: 1 | delay: 3000 ms (+0) | latency:  291 ms | size:   517 bytes
+2025-05-27 00:36:59 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.umass.edu/agriculture-food-environment/greenhouse-floriculture/fact-sheets/nutrition-management-for-greenhouse-crops>: HTTP status code is not handled or not allowed
+2025-05-27 00:36:59 [scrapy.core.engine] INFO: Closing spider (finished)
+2025-05-27 00:36:59 [root] INFO: Database connection closed
+2025-05-27 00:36:59 [scrapy.extensions.feedexport] INFO: Stored json feed (7 items) in: nutrition_data.json
+2025-05-27 00:36:59 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 3292,
+ 'downloader/request_count': 10,
+ 'downloader/request_method_count/GET': 10,
+ 'downloader/response_bytes': 1598764,
+ 'downloader/response_count': 10,
+ 'downloader/response_status_count/200': 7,
+ 'downloader/response_status_count/301': 1,
+ 'downloader/response_status_count/403': 1,
+ 'downloader/response_status_count/404': 1,
+ 'elapsed_time_seconds': 30.140907,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2025, 5, 26, 21, 36, 59, 638647, tzinfo=datetime.timezone.utc),
+ 'httpcache/firsthand': 10,
+ 'httpcache/miss': 10,
+ 'httpcache/store': 10,
+ 'httpcompression/response_bytes': 75982,
+ 'httpcompression/response_count': 1,
+ 'httperror/response_ignored_count': 2,
+ 'httperror/response_ignored_status_count/403': 1,
+ 'httperror/response_ignored_status_count/404': 1,
+ 'item_scraped_count': 7,
+ 'items_per_minute': 14.0,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 45,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 9,
+ 'responses_per_minute': 18.0,
+ 'scheduler/dequeued': 10,
+ 'scheduler/dequeued/memory': 10,
+ 'scheduler/enqueued': 10,
+ 'scheduler/enqueued/memory': 10,
+ 'spider_exceptions/KeyError': 1,
+ 'spider_exceptions/count': 1,
+ 'start_time': datetime.datetime(2025, 5, 26, 21, 36, 29, 497740, tzinfo=datetime.timezone.utc)}
+2025-05-27 00:36:59 [scrapy.core.engine] INFO: Spider closed (finished)
+2025-05-27 00:37:25 [scrapy.utils.log] INFO: Scrapy 2.13.0 started (bot: crop_scraper)
+2025-05-27 00:37:25 [scrapy.utils.log] INFO: Versions:
+{'lxml': '5.4.0',
+ 'libxml2': '2.11.9',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '24.11.0',
+ 'Python': '3.12.6 (tags/v3.12.6:a4a2d2b, Sep  6 2024, 20:11:23) [MSC v.1940 '
+           '64 bit (AMD64)]',
+ 'pyOpenSSL': '25.1.0 (OpenSSL 3.5.0 8 Apr 2025)',
+ 'cryptography': '45.0.3',
+ 'Platform': 'Windows-11-10.0.22621-SP0'}
+2025-05-27 00:37:25 [scrapy.addons] INFO: Enabled addons:
+[]
+2025-05-27 00:37:25 [py.warnings] WARNING: C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\utils\request.py:120: ScrapyDeprecationWarning: 'REQUEST_FINGERPRINTER_IMPLEMENTATION' is a deprecated setting.
+It will be removed in a future version of Scrapy.
+  return cls(crawler)
+
+2025-05-27 00:37:25 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-05-27 00:37:25 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_DEBUG': True,
+ 'AUTOTHROTTLE_ENABLED': True,
+ 'AUTOTHROTTLE_MAX_DELAY': 10,
+ 'AUTOTHROTTLE_START_DELAY': 1,
+ 'AUTOTHROTTLE_TARGET_CONCURRENCY': 2.0,
+ 'BOT_NAME': 'crop_scraper',
+ 'CONCURRENT_REQUESTS': 1,
+ 'DOWNLOAD_DELAY': '2',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'HTTPCACHE_ENABLED': True,
+ 'HTTPCACHE_EXPIRATION_SECS': 3600,
+ 'LOG_FILE': 'scraping.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'crop_scraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'SPIDER_MODULES': ['crop_scraper.spiders'],
+ 'TELNETCONSOLE_ENABLED': False,
+ 'USER_AGENT': 'crop_scraper (+http://www.yourdomain.com)'}
+2025-05-27 00:37:26 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'crop_scraper.middlewares.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats',
+ 'scrapy.downloadermiddlewares.httpcache.HttpCacheMiddleware']
+2025-05-27 00:37:26 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-05-27 00:37:26 [scrapy.middleware] INFO: Enabled item pipelines:
+['crop_scraper.pipelines.ValidationPipeline',
+ 'crop_scraper.pipelines.DatabasePipeline',
+ 'crop_scraper.pipelines.JsonWriterPipeline']
+2025-05-27 00:37:26 [scrapy.core.engine] INFO: Spider opened
+2025-05-27 00:37:26 [root] INFO: Database tables created successfully
+2025-05-27 00:37:26 [root] INFO: Database connection established: crops.db
+2025-05-27 00:37:26 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-05-27 00:37:26 [nutrition] INFO: Parsing nutrition page: https://www.almanac.com/plant/tomatoes
+2025-05-27 00:37:27 [nutrition] INFO: Successfully extracted nutrition data for: How to Grow Tomatoes: Complete Guide to Planting & Harvesting
+2025-05-27 00:37:27 [nutrition] INFO: Parsing nutrition page: https://www.almanac.com/plant/carrots
+2025-05-27 00:37:27 [nutrition] INFO: Successfully extracted nutrition data for: How to Grow Carrots: Planting, Growing & Harvesting Tips for Sweet Roots
+2025-05-27 00:37:27 [nutrition] INFO: Parsing nutrition page: https://www.almanac.com/plant/lettuce
+2025-05-27 00:37:27 [nutrition] INFO: Successfully extracted nutrition data for: How to Grow Lettuce: Sowing, Planting & Harvesting Tips for Crisp Leaves
+2025-05-27 00:37:27 [nutrition] INFO: Parsing nutrition page: https://www.almanac.com/plant/beans
+2025-05-27 00:37:28 [nutrition] INFO: Successfully extracted nutrition data for: How to Grow Green Beans: Plant, Care & Harvest Guide for Bush & Pole Beans
+2025-05-27 00:37:28 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.almanac.com/plant/beans> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\utils\defer.py", line 343, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\utils\python.py", line 369, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\utils\python.py", line 369, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\core\spidermw.py", line 167, in process_sync
+    yield from iterable
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 58, in process_spider_output
+    for o in result:
+             ^^^^^^
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\core\spidermw.py", line 167, in process_sync
+    yield from iterable
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 58, in process_spider_output
+    for o in result:
+             ^^^^^^
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\core\spidermw.py", line 167, in process_sync
+    yield from iterable
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 58, in process_spider_output
+    for o in result:
+             ^^^^^^
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\core\spidermw.py", line 167, in process_sync
+    yield from iterable
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\spidermiddlewares\depth.py", line 59, in process_spider_output
+    yield from super().process_spider_output(response, result, spider)
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 58, in process_spider_output
+    for o in result:
+             ^^^^^^
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\core\spidermw.py", line 167, in process_sync
+    yield from iterable
+  File "C:\Users\PC\byu classwork\wd330\project\crop_scraper\spiders\nutrition_spider.py", line 90, in parse
+    for recipe in self.extract_nutrient_recipes(response, item.get('name', 'Unknown')):
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\byu classwork\wd330\project\crop_scraper\spiders\nutrition_spider.py", line 207, in extract_nutrient_recipes
+    recipe = self.parse_fertilizer_schedule(content, crop_name, response.url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\byu classwork\wd330\project\crop_scraper\spiders\nutrition_spider.py", line 250, in parse_fertilizer_schedule
+    recipe['fertilizer_type'] = 'scheduled_feeding'
+    ~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'CropItem does not support field: fertilizer_type'
+2025-05-27 00:37:28 [root] INFO: Inserted crop: How to Grow Tomatoes: Complete Guide to Planting & Harvesting
+2025-05-27 00:37:28 [root] INFO: Inserted crop: How to Grow Carrots: Planting, Growing & Harvesting Tips for Sweet Roots
+2025-05-27 00:37:28 [root] INFO: Inserted crop: How to Grow Lettuce: Sowing, Planting & Harvesting Tips for Crisp Leaves
+2025-05-27 00:37:28 [root] INFO: Inserted crop: How to Grow Green Beans: Plant, Care & Harvest Guide for Bush & Pole Beans
+2025-05-27 00:37:28 [nutrition] INFO: Parsing nutrition page: https://www.almanac.com/plant/corn
+2025-05-27 00:37:28 [nutrition] INFO: Successfully extracted nutrition data for: How to Grow Sweet Corn: Planting, Pollination & Harvesting Tips
+2025-05-27 00:37:28 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://extension.psu.edu/vegetable-fertilizer-recommendations>: HTTP status code is not handled or not allowed
+2025-05-27 00:37:28 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.umass.edu/agriculture-food-environment/greenhouse-floriculture/fact-sheets/nutrition-management-for-greenhouse-crops>: HTTP status code is not handled or not allowed
+2025-05-27 00:37:28 [root] INFO: Inserted crop: How to Grow Sweet Corn: Planting, Pollination & Harvesting Tips
+2025-05-27 00:37:28 [nutrition] INFO: Parsing nutrition page: https://extension.umn.edu/vegetables/growing-tomatoes
+2025-05-27 00:37:28 [nutrition] INFO: Successfully extracted nutrition data for: Growing Tomatoes
+2025-05-27 00:37:28 [nutrition] INFO: Parsing nutrition page: https://www.almanac.com/plant/potatoes
+2025-05-27 00:37:29 [nutrition] INFO: Successfully extracted nutrition data for: Planting, Growing, and Harvesting Potatoes
+2025-05-27 00:37:29 [root] INFO: Inserted crop: Growing Tomatoes
+2025-05-27 00:37:29 [root] INFO: Inserted crop: Planting, Growing, and Harvesting Potatoes
+2025-05-27 00:37:29 [scrapy.core.engine] INFO: Closing spider (finished)
+2025-05-27 00:37:29 [root] INFO: Database connection closed
+2025-05-27 00:37:29 [scrapy.extensions.feedexport] INFO: Stored json feed (7 items) in: nutrition_data.json
+2025-05-27 00:37:29 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 3175,
+ 'downloader/request_count': 10,
+ 'downloader/request_method_count/GET': 10,
+ 'downloader/response_bytes': 1598764,
+ 'downloader/response_count': 10,
+ 'downloader/response_status_count/200': 7,
+ 'downloader/response_status_count/301': 1,
+ 'downloader/response_status_count/403': 1,
+ 'downloader/response_status_count/404': 1,
+ 'elapsed_time_seconds': 3.003645,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2025, 5, 26, 21, 37, 29, 373361, tzinfo=datetime.timezone.utc),
+ 'httpcache/hit': 10,
+ 'httpcompression/response_bytes': 75982,
+ 'httpcompression/response_count': 1,
+ 'httperror/response_ignored_count': 2,
+ 'httperror/response_ignored_status_count/403': 1,
+ 'httperror/response_ignored_status_count/404': 1,
+ 'item_scraped_count': 7,
+ 'items_per_minute': 140.0,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 35,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 9,
+ 'responses_per_minute': 180.0,
+ 'scheduler/dequeued': 10,
+ 'scheduler/dequeued/memory': 10,
+ 'scheduler/enqueued': 10,
+ 'scheduler/enqueued/memory': 10,
+ 'spider_exceptions/KeyError': 1,
+ 'spider_exceptions/count': 1,
+ 'start_time': datetime.datetime(2025, 5, 26, 21, 37, 26, 369716, tzinfo=datetime.timezone.utc)}
+2025-05-27 00:37:29 [scrapy.core.engine] INFO: Spider closed (finished)
+2025-05-27 00:38:00 [scrapy.utils.log] INFO: Scrapy 2.13.0 started (bot: crop_scraper)
+2025-05-27 00:38:00 [scrapy.utils.log] INFO: Versions:
+{'lxml': '5.4.0',
+ 'libxml2': '2.11.9',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '24.11.0',
+ 'Python': '3.12.6 (tags/v3.12.6:a4a2d2b, Sep  6 2024, 20:11:23) [MSC v.1940 '
+           '64 bit (AMD64)]',
+ 'pyOpenSSL': '25.1.0 (OpenSSL 3.5.0 8 Apr 2025)',
+ 'cryptography': '45.0.3',
+ 'Platform': 'Windows-11-10.0.22621-SP0'}
+2025-05-27 00:38:00 [scrapy.addons] INFO: Enabled addons:
+[]
+2025-05-27 00:38:00 [py.warnings] WARNING: C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\utils\request.py:120: ScrapyDeprecationWarning: 'REQUEST_FINGERPRINTER_IMPLEMENTATION' is a deprecated setting.
+It will be removed in a future version of Scrapy.
+  return cls(crawler)
+
+2025-05-27 00:38:00 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-05-27 00:38:00 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_DEBUG': True,
+ 'AUTOTHROTTLE_ENABLED': True,
+ 'AUTOTHROTTLE_MAX_DELAY': 10,
+ 'AUTOTHROTTLE_START_DELAY': 1,
+ 'AUTOTHROTTLE_TARGET_CONCURRENCY': 2.0,
+ 'BOT_NAME': 'crop_scraper',
+ 'CONCURRENT_REQUESTS': 1,
+ 'DOWNLOAD_DELAY': 3,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'HTTPCACHE_ENABLED': True,
+ 'HTTPCACHE_EXPIRATION_SECS': 3600,
+ 'LOG_FILE': 'scraping.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'crop_scraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'SPIDER_MODULES': ['crop_scraper.spiders'],
+ 'TELNETCONSOLE_ENABLED': False,
+ 'USER_AGENT': 'crop_scraper (+http://www.yourdomain.com)'}
+2025-05-27 00:38:01 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'crop_scraper.middlewares.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats',
+ 'scrapy.downloadermiddlewares.httpcache.HttpCacheMiddleware']
+2025-05-27 00:38:01 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-05-27 00:38:01 [scrapy.middleware] INFO: Enabled item pipelines:
+['crop_scraper.pipelines.ValidationPipeline',
+ 'crop_scraper.pipelines.DatabasePipeline',
+ 'crop_scraper.pipelines.JsonWriterPipeline']
+2025-05-27 00:38:01 [scrapy.core.engine] INFO: Spider opened
+2025-05-27 00:38:01 [root] INFO: Database tables created successfully
+2025-05-27 00:38:01 [root] INFO: Database connection established: crops.db
+2025-05-27 00:38:01 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-05-27 00:38:01 [nutrition] INFO: Parsing nutrition page: https://www.almanac.com/plant/tomatoes
+2025-05-27 00:38:01 [nutrition] INFO: Successfully extracted nutrition data for: How to Grow Tomatoes: Complete Guide to Planting & Harvesting
+2025-05-27 00:38:01 [nutrition] INFO: Parsing nutrition page: https://www.almanac.com/plant/carrots
+2025-05-27 00:38:02 [nutrition] INFO: Successfully extracted nutrition data for: How to Grow Carrots: Planting, Growing & Harvesting Tips for Sweet Roots
+2025-05-27 00:38:02 [root] INFO: Inserted crop: How to Grow Tomatoes: Complete Guide to Planting & Harvesting
+2025-05-27 00:38:02 [root] INFO: Inserted crop: How to Grow Carrots: Planting, Growing & Harvesting Tips for Sweet Roots
+2025-05-27 00:38:02 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://extension.psu.edu/vegetable-fertilizer-recommendations>: HTTP status code is not handled or not allowed
+2025-05-27 00:38:02 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.umass.edu/agriculture-food-environment/greenhouse-floriculture/fact-sheets/nutrition-management-for-greenhouse-crops>: HTTP status code is not handled or not allowed
+2025-05-27 00:38:02 [nutrition] INFO: Parsing nutrition page: https://www.almanac.com/plant/lettuce
+2025-05-27 00:38:02 [nutrition] INFO: Successfully extracted nutrition data for: How to Grow Lettuce: Sowing, Planting & Harvesting Tips for Crisp Leaves
+2025-05-27 00:38:02 [nutrition] INFO: Parsing nutrition page: https://www.almanac.com/plant/beans
+2025-05-27 00:38:03 [nutrition] INFO: Successfully extracted nutrition data for: How to Grow Green Beans: Plant, Care & Harvest Guide for Bush & Pole Beans
+2025-05-27 00:38:03 [nutrition] INFO: Parsing nutrition page: https://www.almanac.com/plant/corn
+2025-05-27 00:38:03 [nutrition] INFO: Successfully extracted nutrition data for: How to Grow Sweet Corn: Planting, Pollination & Harvesting Tips
+2025-05-27 00:38:03 [nutrition] INFO: Parsing nutrition page: https://www.almanac.com/plant/potatoes
+2025-05-27 00:38:03 [nutrition] INFO: Successfully extracted nutrition data for: Planting, Growing, and Harvesting Potatoes
+2025-05-27 00:38:03 [nutrition] INFO: Parsing nutrition page: https://extension.umn.edu/vegetables/growing-tomatoes
+2025-05-27 00:38:03 [nutrition] INFO: Successfully extracted nutrition data for: Growing Tomatoes
+2025-05-27 00:38:03 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.almanac.com/plant/beans> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\utils\defer.py", line 343, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\utils\python.py", line 369, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\utils\python.py", line 369, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\core\spidermw.py", line 167, in process_sync
+    yield from iterable
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 58, in process_spider_output
+    for o in result:
+             ^^^^^^
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\core\spidermw.py", line 167, in process_sync
+    yield from iterable
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 58, in process_spider_output
+    for o in result:
+             ^^^^^^
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\core\spidermw.py", line 167, in process_sync
+    yield from iterable
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 58, in process_spider_output
+    for o in result:
+             ^^^^^^
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\core\spidermw.py", line 167, in process_sync
+    yield from iterable
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\spidermiddlewares\depth.py", line 59, in process_spider_output
+    yield from super().process_spider_output(response, result, spider)
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 58, in process_spider_output
+    for o in result:
+             ^^^^^^
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\core\spidermw.py", line 167, in process_sync
+    yield from iterable
+  File "C:\Users\PC\byu classwork\wd330\project\crop_scraper\spiders\nutrition_spider.py", line 90, in parse
+    for recipe in self.extract_nutrient_recipes(response, item.get('name', 'Unknown')):
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\byu classwork\wd330\project\crop_scraper\spiders\nutrition_spider.py", line 207, in extract_nutrient_recipes
+    recipe = self.parse_fertilizer_schedule(content, crop_name, response.url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\byu classwork\wd330\project\crop_scraper\spiders\nutrition_spider.py", line 250, in parse_fertilizer_schedule
+    recipe['fertilizer_type'] = 'scheduled_feeding'
+    ~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\site-packages\scrapy\item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'CropItem does not support field: fertilizer_type'
+2025-05-27 00:38:04 [root] INFO: Inserted crop: How to Grow Lettuce: Sowing, Planting & Harvesting Tips for Crisp Leaves
+2025-05-27 00:38:04 [root] INFO: Inserted crop: How to Grow Green Beans: Plant, Care & Harvest Guide for Bush & Pole Beans
+2025-05-27 00:38:04 [root] INFO: Inserted crop: How to Grow Sweet Corn: Planting, Pollination & Harvesting Tips
+2025-05-27 00:38:04 [root] INFO: Inserted crop: Planting, Growing, and Harvesting Potatoes
+2025-05-27 00:38:04 [root] INFO: Inserted crop: Growing Tomatoes
+2025-05-27 00:38:04 [scrapy.core.engine] INFO: Closing spider (finished)
+2025-05-27 00:38:04 [root] INFO: Database connection closed
+2025-05-27 00:38:04 [scrapy.extensions.feedexport] INFO: Stored json feed (7 items) in: nutrition_data.json
+2025-05-27 00:38:04 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 3236,
+ 'downloader/request_count': 10,
+ 'downloader/request_method_count/GET': 10,
+ 'downloader/response_bytes': 1598764,
+ 'downloader/response_count': 10,
+ 'downloader/response_status_count/200': 7,
+ 'downloader/response_status_count/301': 1,
+ 'downloader/response_status_count/403': 1,
+ 'downloader/response_status_count/404': 1,
+ 'elapsed_time_seconds': 2.831625,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2025, 5, 26, 21, 38, 4, 95601, tzinfo=datetime.timezone.utc),
+ 'httpcache/hit': 10,
+ 'httpcompression/response_bytes': 75982,
+ 'httpcompression/response_count': 1,
+ 'httperror/response_ignored_count': 2,
+ 'httperror/response_ignored_status_count/403': 1,
+ 'httperror/response_ignored_status_count/404': 1,
+ 'item_scraped_count': 7,
+ 'items_per_minute': 210.0,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 35,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 9,
+ 'responses_per_minute': 270.0,
+ 'scheduler/dequeued': 10,
+ 'scheduler/dequeued/memory': 10,
+ 'scheduler/enqueued': 10,
+ 'scheduler/enqueued/memory': 10,
+ 'spider_exceptions/KeyError': 1,
+ 'spider_exceptions/count': 1,
+ 'start_time': datetime.datetime(2025, 5, 26, 21, 38, 1, 263976, tzinfo=datetime.timezone.utc)}
+2025-05-27 00:38:04 [scrapy.core.engine] INFO: Spider closed (finished)
